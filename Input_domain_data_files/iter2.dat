@@ -1,0 +1,7 @@
+I cask(Ca) cask(Cb) cask(Cc) stack(S1) stack(S2) node(S1) node(S2) node(EXIT) on(Ca,Cb) on(Cb,Cc) on(Cc,S1) clear(Ca,S1) clear(S2,S2) cts(EXIT) loaded(None)
+
+A     move(a,b) : cts(a) node(a) node(b) -> -cts(a) cts(b)
+A   load(l,s,b) : stack(s) cask(l) cts(s) loaded(None) clear(l,s) on(l,b) -> -loaded(None) loaded(l) -clear(l,s) -on(l,b) clear(b,s)
+A unload(l,s,t) : stack(s) cask(l) cts(s) loaded(l) clear(t,s) -> -loaded(l) loaded(None) -clear(t,s) on(l,t) clear(l,s)
+
+G cts(EXIT) loaded(Cb)

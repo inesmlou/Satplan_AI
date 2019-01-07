@@ -1,0 +1,6 @@
+I on(A,B) on(B,C) on(C,Table) clear(A)
+
+A move(b,f,t) : on(b,f) clear(b) clear(t) -> -on(b,f) on(b,t) -clear(t)  clear(f)
+A move2table(b,f) : on(b,f) clear(b) -> -on(b,f) on(b,Table) clear(f)
+
+G on(C,B) on(B,A) on(A,Table) clear(C)

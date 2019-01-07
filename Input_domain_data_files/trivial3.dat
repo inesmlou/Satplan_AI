@@ -1,0 +1,6 @@
+I ready(A) ready(B) ready(C)
+
+A do(x) : ready(x) -> done(x)
+A redo(x) : done(x) -> redone(x)
+
+G redone(B)
